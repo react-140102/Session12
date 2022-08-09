@@ -7,7 +7,6 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableHighlight,
 } from 'react-native';
 import api from '../utils/api';
 
@@ -17,8 +16,8 @@ interface Category {
   persianName: string;
 }
 
-//TODO: fix PropType
-export function DrugCategoryScreen({navigation}: any) {
+export function DrugScreen({route}: any) {
+  const category = route.params;
   const [data, setData] = useState<Category[]>([]);
   useEffect(() => {
     (async () => {
@@ -28,22 +27,21 @@ export function DrugCategoryScreen({navigation}: any) {
   }, []);
 
   const renderItem = ({item}: {item: Category}) => (
-    <TouchableHighlight onPress={() => navigation.navigate('Drug', item)}>
-      <View style={styles.item}>
-        <Text style={styles.titleFa}>{item.persianName}</Text>
-        <Text style={styles.titleEn}>{item.name}</Text>
-        <Image source={require('../assets/images/drug.png')}></Image>
-      </View>
-    </TouchableHighlight>
+    <View style={styles.item}>
+      <Text style={styles.titleFa}>{item.persianName}</Text>
+      <Text style={styles.titleEn}>{item.name}</Text>
+      <Image source={require('../assets/images/drug.png')}></Image>
+    </View>
   );
 
   return (
     <SafeAreaView style={styles.container}>
-      <FlatList
+      {/* <FlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
-      />
+      /> */}
+      <Text>Drug Screen: {category.persianName}</Text>
     </SafeAreaView>
   );
 }
