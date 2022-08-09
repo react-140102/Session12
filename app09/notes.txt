@@ -15,12 +15,19 @@ Routing, Navigation
   npm install @react-navigation/native-stack
 
 
-  stack
+  ✔️stack
   tab
   drawer
 
 
-
+Image
+	<Image	source={require('@expo/snack-static/react-native-logo.png')}	/>
+	<Image
+		source={{
+			uri: 'https://reactnative.dev/img/tiny_logo.png',
+		}}
+	/>
+	
 
 
 
@@ -44,14 +51,7 @@ RTL:
 		}
 
 
-Image
-	<Image	source={require('@expo/snack-static/react-native-logo.png')}	/>
-	<Image
-		source={{
-			uri: 'https://reactnative.dev/img/tiny_logo.png',
-		}}
-	/>
-	
+
 Gif
 	android/app/build.gradle
 	 // For animated GIF support
