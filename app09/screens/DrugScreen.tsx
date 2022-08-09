@@ -9,39 +9,36 @@ import {
   View,
 } from 'react-native';
 import api from '../utils/api';
+import {Category} from './Category';
+import {Drug} from './Drug';
 
-interface Category {
-  id: number;
-  name: string;
-  persianName: string;
-}
-
-export function DrugScreen({route}: any) {
-  const category = route.params;
-  const [data, setData] = useState<Category[]>([]);
+export function DrugScreen({route, navigation}: any) {
+  const category: Category = route.params;
+  const [data, setData] = useState<Drug[]>([]);
   useEffect(() => {
     (async () => {
-      const resp = await api.get<Category[]>('category');
+      const resp = await api.get<Drug[]>(`drugs?categoryId=${category.id}`);
       setData(resp.data);
     })();
-  }, []);
+    navigation.setOptions({title: 'دسته ' + category.persianName});
+  }, [category]);
 
-  const renderItem = ({item}: {item: Category}) => (
+  const renderItem = ({item}: {item: Drug}) => (
     <View style={styles.item}>
-      <Text style={styles.titleFa}>{item.persianName}</Text>
       <Text style={styles.titleEn}>{item.name}</Text>
-      <Image source={require('../assets/images/drug.png')}></Image>
+      <Image
+        style={styles.drugIcon}
+        source={require('../assets/images/drug.png')}></Image>
     </View>
   );
 
   return (
     <SafeAreaView style={styles.container}>
-      {/* <FlatList
+      <FlatList
         data={data}
         renderItem={renderItem}
         keyExtractor={item => item.id.toString()}
-      /> */}
-      <Text>Drug Screen: {category.persianName}</Text>
+      />
     </SafeAreaView>
   );
 }
@@ -62,5 +59,9 @@ const styles = StyleSheet.create({
   },
   titleEn: {
     fontSize: 20,
+  },
+  drugIcon: {
+    width: 40,
+    height: 40,
   },
 });

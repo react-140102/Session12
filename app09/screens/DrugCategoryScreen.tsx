@@ -10,12 +10,7 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import api from '../utils/api';
-
-interface Category {
-  id: number;
-  name: string;
-  persianName: string;
-}
+import {Category} from './Category';
 
 //TODO: fix PropType
 export function DrugCategoryScreen({navigation}: any) {
