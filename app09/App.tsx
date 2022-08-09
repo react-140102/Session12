@@ -3,17 +3,10 @@ import React, {useEffect} from 'react';
 import RNBootSplash from 'react-native-bootsplash';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {Text, View} from 'react-native';
+import {HomeScreen} from './screens/HomeScreen';
+import {DrugCategoryScreen} from './screens/DrugCategoryScreen';
 
 const Stack = createNativeStackNavigator();
-
-function HomeScreen() {
-  return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-      <Text>صفحه اصلی</Text>
-    </View>
-  );
-}
 
 const App = () => {
   useEffect(() => {
@@ -24,6 +17,7 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen name="DrugCategory" component={DrugCategoryScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
