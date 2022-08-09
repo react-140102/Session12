@@ -12,6 +12,7 @@ import com.facebook.soloader.SoLoader;
 import com.app09.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import com.facebook.react.modules.i18nmanager.I18nUtil;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -55,6 +56,12 @@ public class MainApplication extends Application implements ReactApplication {
     // If you opted-in for the New Architecture, we enable the TurboModule system
     ReactFeatureFlags.useTurboModules = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED;
     SoLoader.init(this, /* native exopackage */ false);
+
+    I18nUtil sharedI18nUtilInstance = I18nUtil.getInstance(); //<== AmerllicA config
+    sharedI18nUtilInstance.forceRTL(this, true); //<== AmerllicA config
+    sharedI18nUtilInstance.allowRTL(this, true); //<== AmerllicA config
+
+
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
   }
 
