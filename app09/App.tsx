@@ -1,14 +1,4 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
-import React, {type PropsWithChildren} from 'react';
+import React, {useEffect, type PropsWithChildren} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -26,6 +16,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import RNBootSplash from 'react-native-bootsplash';
 
 const Section: React.FC<
   PropsWithChildren<{
@@ -58,6 +49,9 @@ const Section: React.FC<
 };
 
 const App = () => {
+  useEffect(() => {
+    RNBootSplash.hide();
+  }, []);
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {

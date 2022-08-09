@@ -1,0 +1,112 @@
+Splash Screen
+	react-native-bootsplash	
+  https://github.com/zoontek/react-native-bootsplash/
+
+
+
+
+RTL:
+  https://stackoverflow.com/a/52381831/908464
+
+  android\app\src\main\AndroidManifest.xml
+    android:supportsRtl="true"
+	
+	
+	MainActivity
+		
+		import com.facebook.react.modules.i18nmanager.I18nUtil;
+
+		@Override
+		protected void onCreate(Bundle savedInstanceState) {
+		  super.onCreate(null);
+		  I18nUtil sharedI18nUtilInstance = I18nUtil.getInstance();
+		  sharedI18nUtilInstance.allowRTL(getContext(), true);
+		  sharedI18nUtilInstance.forceRTL(getContext(), true);
+		}
+
+
+Image
+	<Image	source={require('@expo/snack-static/react-native-logo.png')}	/>
+	<Image
+		source={{
+			uri: 'https://reactnative.dev/img/tiny_logo.png',
+		}}
+	/>
+	
+Gif
+	android/app/build.gradle
+	 // For animated GIF support
+	implementation 'com.facebook.fresco:animated-gif:2.5.0'
+
+
+
+Routing, Navigation
+
+  https://reactnavigation.org/docs/getting-started/
+
+
+  yarn add @react-navigation/native
+  yarn add react-native-screens react-native-safe-area-context
+  yarn add @react-navigation/native-stack
+
+  stack
+  tab
+  drawer
+
+
+CSS Flex
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://flexboxfroggy.com/
+
+
+
+adb 
+  adb devices
+
+  # restart 
+  adb kill-server 
+
+
+  adb logcat *:S ReactNative:V ReactNativeJS:V
+
+Detect Platform
+  import {Platform} from 'react-native';
+  Platform.os === 'android'
+
+  ya
+
+  Comp.android.tsx
+  Comp.ios.tsx
+
+Component Package
+  https://nativebase.io/
+    https://docs.nativebase.io/install-rn
+    
+    yarn add native-base react-native-svg react-native-safe-area-context
+
+  https://reactnativeelements.com/
+
+
+ICON
+  https://github.com/oblador/react-native-vector-icons  
+  yarn add react-native-vector-icons
+
+
+APP icons
+https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+
+Rename app
+  https://www.npmjs.com/package/react-native-rename
+
+  npx react-native-rename "دارو خانه سبز" -b ir.fad.rn.session10
+  npx react-native-rename "GreenDrugStore" -b ir.fad.rn.session10
+
+
+
+
+  
+
+Embeded DB
+  sqlite
+  
+  
