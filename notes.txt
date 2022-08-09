@@ -24,6 +24,21 @@ RTL:
 		}
 
 
+Image
+	<Image	source={require('@expo/snack-static/react-native-logo.png')}	/>
+	<Image
+		source={{
+			uri: 'https://reactnative.dev/img/tiny_logo.png',
+		}}
+	/>
+	
+Gif
+	android/app/build.gradle
+	 // For animated GIF support
+	implementation 'com.facebook.fresco:animated-gif:2.5.0'
+
+
+
 Routing, Navigation
 
   https://reactnavigation.org/docs/getting-started/
@@ -97,3 +112,5 @@ Splash Screen
 
 Embeded DB
   sqlite
+  
+  
