@@ -6,6 +6,7 @@ import {
   StatusBar,
   StyleSheet,
   Text,
+  TouchableHighlight,
   View,
 } from 'react-native';
 import api from '../utils/api';
@@ -24,12 +25,14 @@ export function DrugScreen({route, navigation}: any) {
   }, [category]);
 
   const renderItem = ({item}: {item: Drug}) => (
-    <View style={styles.item}>
-      <Text style={styles.titleEn}>{item.name}</Text>
-      <Image
-        style={styles.drugIcon}
-        source={require('../assets/images/drug.png')}></Image>
-    </View>
+    <TouchableHighlight onPress={() => navigation.navigate('DrugDetail', item)}>
+      <View style={styles.item}>
+        <Text style={styles.titleEn}>{item.name}</Text>
+        <Image
+          style={styles.drugIcon}
+          source={require('../assets/images/drug.png')}></Image>
+      </View>
+    </TouchableHighlight>
   );
 
   return (
