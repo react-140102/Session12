@@ -1,13 +1,21 @@
 import React from 'react';
-import {Button, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import {Button} from 'react-native-paper';
 
 export function HomeScreen({navigation}: any) {
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>صفحه اصلی</Text>
+      <Button onPress={() => navigation.navigate('DrugCategory')}>
+        دسته بندی دارو ها
+      </Button>
+
       <Button
-        title="دسته بندی دارو ها"
-        onPress={() => navigation.navigate('DrugCategory')}></Button>
+        icon="camera"
+        mode="contained"
+        onPress={() => console.log('Pressed')}>
+        Press me
+      </Button>
     </View>
   );
 }

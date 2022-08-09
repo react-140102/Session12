@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import {Provider as PaperProvider} from 'react-native-paper';
 
 import RNBootSplash from 'react-native-bootsplash';
 import {NavigationContainer} from '@react-navigation/native';
@@ -16,14 +17,16 @@ const App = () => {
   }, []);
 
   return (
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={HomeScreen} />
-        <Stack.Screen name="DrugCategory" component={DrugCategoryScreen} />
-        <Stack.Screen name="Drug" component={DrugScreen} />
-        <Stack.Screen name="DrugDetail" component={DrugDetailScreen} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <PaperProvider>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="DrugCategory" component={DrugCategoryScreen} />
+          <Stack.Screen name="Drug" component={DrugScreen} />
+          <Stack.Screen name="DrugDetail" component={DrugDetailScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </PaperProvider>
   );
 };
 

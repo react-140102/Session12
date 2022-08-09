@@ -29,6 +29,17 @@ Image
 	/>
 	
 
+Component Package
+
+  ✔️https://reactnativepaper.com/
+
+    https://nativebase.io/
+      https://docs.nativebase.io/install-rn
+      
+      yarn add native-base react-native-svg react-native-safe-area-context
+
+    https://reactnativeelements.com/
+
 
 
 RTL:
@@ -86,13 +97,6 @@ Detect Platform
   Comp.android.tsx
   Comp.ios.tsx
 
-Component Package
-  https://nativebase.io/
-    https://docs.nativebase.io/install-rn
-    
-    yarn add native-base react-native-svg react-native-safe-area-context
-
-  https://reactnativeelements.com/
 
 
 ICON
