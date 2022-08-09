@@ -29,6 +29,7 @@ export function DrugCategoryScreen() {
     <View style={styles.item}>
       <Text style={styles.titleFa}>{item.persianName}</Text>
       <Text style={styles.titleEn}>{item.name}</Text>
+      <Image source={require('../assets/images/drug.png')}></Image>
     </View>
   );
 
