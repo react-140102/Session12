@@ -109,16 +109,14 @@ https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
 
 Rename app
   https://www.npmjs.com/package/react-native-rename
-
-  npx react-native-rename "دارو خانه سبز" -b ir.fad.rn.session10
-  npx react-native-rename "GreenDrugStore" -b ir.fad.rn.session10
-
-
-
-
   
-
+  npx react-native-rename "GreenDrugStore" -b ir.fad.rn.session10
+  
+  android/app/src/main/res/values/strings.xml -> app_name
+  
 Embeded DB
   sqlite
   Realm
+
+  
   
