@@ -72,9 +72,14 @@ Gif
 	 // For animated GIF support
 	implementation 'com.facebook.fresco:animated-gif:2.5.0'
 
+Detect Platform
+  import {Platform} from 'react-native';
+  Platform.os === 'android'
 
+  ya
 
-
+  Comp.android.tsx
+  Comp.ios.tsx
 
 
 CSS Flex
@@ -92,16 +97,6 @@ adb
 
   adb logcat *:S ReactNative:V ReactNativeJS:V
 
-Detect Platform
-  import {Platform} from 'react-native';
-  Platform.os === 'android'
-
-  ya
-
-  Comp.android.tsx
-  Comp.ios.tsx
-
-
 
 ICON
   https://github.com/oblador/react-native-vector-icons  
@@ -110,6 +105,7 @@ ICON
 
 APP icons
 https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+
 
 Rename app
   https://www.npmjs.com/package/react-native-rename
@@ -124,5 +120,5 @@ Rename app
 
 Embeded DB
   sqlite
-  
+  Realm
   
