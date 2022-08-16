@@ -7,6 +7,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {HomeStackScreen} from './screens/HomeStackScreen';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {SearchScreen} from './screens/SearchScreen';
+import {NewsScreen} from './screens/NewsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -58,7 +59,7 @@ const App = () => {
           />
           <Tab.Screen
             name="TabNews"
-            component={SearchScreen}
+            component={NewsScreen}
             options={{
               title: 'تازه ها',
               tabBarIcon(props) {
