@@ -32,14 +32,16 @@ export function SearchScreen({navigation}: any) {
         value={searchQuery}
       />
       <ScrollView>
-        {data.map(d => (
-          <List.Item
-            key={d.id}
-            title={d.name}
-            description={d.name}
-            left={props => <List.Icon {...props} icon="folder" />}
-          />
-        ))}
+        <List.Section title="Accordions">
+          {data.map(d => (
+            <List.Item
+              key={d.id}
+              title={d.name}
+              description={d.name}
+              left={props => <List.Icon {...props} icon="folder" />}
+            />
+          ))}
+        </List.Section>
       </ScrollView>
     </View>
   );
