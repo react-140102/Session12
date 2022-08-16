@@ -87,7 +87,6 @@ CSS Flex
   https://flexboxfroggy.com/
 
 
-
 adb 
   adb devices
 
@@ -104,7 +103,7 @@ ICON
 
 
 APP icons
-https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
+  https://romannurik.github.io/AndroidAssetStudio/icons-launcher.html
 
 
 Rename app
@@ -114,8 +113,12 @@ Rename app
   
   android/app/src/main/res/values/strings.xml -> app_name
   
-Embeded DB
+Embedded DB
   sqlite
+    https://www.npmjs.com/package/react-native-sqlite-storage
+
+    npm install --save react-native-sqlite-storage
+    npm install --save @types/react-native-sqlite-storage
   Realm
 
   
