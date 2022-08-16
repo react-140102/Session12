@@ -11,12 +11,30 @@ import {
 } from 'react-native';
 import api from '../utils/api';
 import {Category} from './Category';
+import SQLite from 'react-native-sqlite-storage';
+SQLite.enablePromise(true);
 
 //TODO: fix PropType
 export function DrugCategoryScreen({navigation}: any) {
   const [data, setData] = useState<Category[]>([]);
   useEffect(() => {
     (async () => {
+      // const db = await SQLite.openDatabase({
+      //   name: 'data.db',
+      //   createFromLocation: 1,
+      // });
+      // console.log('-->');
+      // db.transaction(tx => {
+      //   tx.executeSql('select * from tbl_Category', [], (tx, results) => {
+      //     console.log('Query completed');
+
+      //     var len = results.rows.length;
+      //     for (let i = 0; i < len; i++) {
+      //       let row = results.rows.item(i);
+      //       console.log(`category name: ${row.name}, id: ${row.id}`);
+      //     }
+      //   });
+      // });
       const resp = await api.get<Category[]>('category');
       setData(resp.data);
     })();
