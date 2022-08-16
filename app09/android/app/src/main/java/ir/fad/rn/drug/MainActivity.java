@@ -1,4 +1,4 @@
-package com.app09;
+package ir.fad.rn.drug;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
@@ -14,7 +14,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "app09";
+    return "GreenDrugStore";
   }
 
   /**

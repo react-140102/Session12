@@ -1,4 +1,4 @@
-package com.app09.newarchitecture.modules;
+package ir.fad.rn.drug.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

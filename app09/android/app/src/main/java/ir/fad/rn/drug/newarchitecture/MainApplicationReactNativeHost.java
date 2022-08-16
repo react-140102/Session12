@@ -1,4 +1,4 @@
-package com.app09.newarchitecture;
+package ir.fad.rn.drug.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.app09.BuildConfig;
-import com.app09.newarchitecture.components.MainComponentsRegistry;
-import com.app09.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import ir.fad.rn.drug.BuildConfig;
+import ir.fad.rn.drug.newarchitecture.components.MainComponentsRegistry;
+import ir.fad.rn.drug.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 
