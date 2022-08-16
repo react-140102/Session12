@@ -63,6 +63,10 @@ RTL:
 
 
 
+AsyncStorage
+  https://react-native-async-storage.github.io/async-storage/docs/install
+
+
 Gif
 	android/app/build.gradle
 	 // For animated GIF support
