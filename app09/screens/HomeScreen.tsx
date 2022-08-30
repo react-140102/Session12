@@ -7,7 +7,10 @@ export function HomeScreen({navigation}: any) {
   const [location, setLocation] = useState<any>();
   useEffect(() => {
     const watchID = Geolocation.watchPosition(
-      info => setLocation(info),
+      info => {
+        console.log(info);
+        setLocation(info);
+      },
       err => {
         console.log(err);
       },
