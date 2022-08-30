@@ -18,10 +18,10 @@ export function DrugScreen({route, navigation}: any) {
   const [data, setData] = useState<Drug[]>([]);
   useEffect(() => {
     (async () => {
-      const resp = await api.get<Drug[]>(`drugs?categoryId=${category.id}`);
+      const resp = await api.get<Drug[]>(`drugs?categoryId=${category.CatId}`);
       setData(resp.data);
     })();
-    navigation.setOptions({title: 'دسته ' + category.persianName});
+    navigation.setOptions({title: 'دسته ' + category.CatPersianName});
   }, [category]);
 
   const renderItem = ({item}: {item: Drug}) => (

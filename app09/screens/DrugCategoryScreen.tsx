@@ -23,16 +23,19 @@ export function DrugCategoryScreen({navigation}: any) {
         name: 'dataX.db',
         createFromLocation: '~data.db',
       });
-      console.log('-->');
       db.transaction(tx => {
         tx.executeSql('select * from tbl_Category', [], (tx, results) => {
-          console.log('Query completed');
-
           var len = results.rows.length;
+          console.log('-->', results);
+          // console.log(`${JSON.stringify(row)}`);
+
+          //
+          const result = [];
           for (let i = 0; i < len; i++) {
             let row = results.rows.item(i);
-            console.log(`${JSON.stringify(row)}`);
+            result.push(row);
           }
+          setData(result);
         });
       });
       // const resp = await api.get<Category[]>('category');
@@ -43,8 +46,8 @@ export function DrugCategoryScreen({navigation}: any) {
   const renderItem = ({item}: {item: Category}) => (
     <TouchableHighlight onPress={() => navigation.navigate('Drug', item)}>
       <View style={styles.item}>
-        <Text style={styles.titleFa}>{item.persianName}</Text>
-        <Text style={styles.titleEn}>{item.name}</Text>
+        <Text style={styles.titleFa}>{item.CatPersianName}</Text>
+        <Text style={styles.titleEn}>{item.CatName}</Text>
         <Image source={require('../assets/images/drug.png')}></Image>
       </View>
     </TouchableHighlight>
@@ -55,7 +58,7 @@ export function DrugCategoryScreen({navigation}: any) {
       <FlatList
         data={data}
         renderItem={renderItem}
-        keyExtractor={item => item.id.toString()}
+        keyExtractor={item => item.CatId.toString()}
       />
     </SafeAreaView>
   );
