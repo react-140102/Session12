@@ -6,8 +6,16 @@ import Geolocation from '@react-native-community/geolocation';
 export function HomeScreen({navigation}: any) {
   const [location, setLocation] = useState<any>();
   useEffect(() => {
-    Geolocation.getCurrentPosition(info => setLocation(info));
-  });
+    const watchID = Geolocation.watchPosition(
+      info => setLocation(info),
+      err => {
+        console.log(err);
+      },
+    );
+    return () => {
+      Geolocation.clearWatch(watchID);
+    };
+  }, []);
   return (
     <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text>
