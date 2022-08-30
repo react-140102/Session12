@@ -26,7 +26,7 @@ export function DrugCategoryScreen({navigation}: any) {
       db.transaction(tx => {
         tx.executeSql('select * from tbl_Category', [], (tx, results) => {
           var len = results.rows.length;
-          console.log('-->', results);
+          // console.log('-->', results);
           // console.log(`${JSON.stringify(row)}`);
 
           //

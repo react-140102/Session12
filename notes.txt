@@ -110,7 +110,9 @@ Splash Screen
 
   https://blog.logrocket.com/building-a-splash-screen-in-react-native/
 
-Embeded DB
+Embedded DB
   sqlite
+  Realm
+    https://realm.io/
   
   

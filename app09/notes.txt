@@ -120,6 +120,9 @@ Embedded DB
     npm install --save react-native-sqlite-storage
     npm install --save @types/react-native-sqlite-storage
   Realm
+    https://realm.io/
 
-  
-  
+
+Location, Geo Location  
+  https://github.com/michalchudziak/react-native-geolocation
+  @react-native-community/geolocation
