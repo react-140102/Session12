@@ -141,3 +141,9 @@ Map
 Camera
 
   https://github.com/mrousavy/react-native-vision-camera
+
+
+Payment
+  In App Purchase
+
+  Custom Server 
