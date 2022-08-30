@@ -9,6 +9,7 @@ import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {SearchScreen} from './screens/SearchScreen';
 import {NewsScreen} from './screens/NewsScreen';
 import {MapScreen} from './screens/MapScreen';
+import {CameraScreen} from './screens/CameraScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -53,7 +54,19 @@ const App = () => {
               title: 'نقشه',
               tabBarIcon(props) {
                 return (
-                  <Icon name="heart" size={props.size} color={props.color} />
+                  <Icon name="map" size={props.size} color={props.color} />
+                );
+              },
+            }}
+          />
+          <Tab.Screen
+            name="TabCamera"
+            component={CameraScreen}
+            options={{
+              title: 'دوربین',
+              tabBarIcon(props) {
+                return (
+                  <Icon name="camera" size={props.size} color={props.color} />
                 );
               },
             }}

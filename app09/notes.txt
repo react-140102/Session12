@@ -137,3 +137,7 @@ Map
   Map.ir
     https://help.map.ir/documentation/reactsdk-installation/    
 
+
+Camera
+
+  https://github.com/mrousavy/react-native-vision-camera
