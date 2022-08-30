@@ -19,24 +19,24 @@ export function DrugCategoryScreen({navigation}: any) {
   const [data, setData] = useState<Category[]>([]);
   useEffect(() => {
     (async () => {
-      // const db = await SQLite.openDatabase({
-      //   name: 'data.db',
-      //   createFromLocation: 1,
-      // });
-      // console.log('-->');
-      // db.transaction(tx => {
-      //   tx.executeSql('select * from tbl_Category', [], (tx, results) => {
-      //     console.log('Query completed');
+      const db = await SQLite.openDatabase({
+        name: 'dataX.db',
+        createFromLocation: '~data.db',
+      });
+      console.log('-->');
+      db.transaction(tx => {
+        tx.executeSql('select * from tbl_Category', [], (tx, results) => {
+          console.log('Query completed');
 
-      //     var len = results.rows.length;
-      //     for (let i = 0; i < len; i++) {
-      //       let row = results.rows.item(i);
-      //       console.log(`category name: ${row.name}, id: ${row.id}`);
-      //     }
-      //   });
-      // });
-      const resp = await api.get<Category[]>('category');
-      setData(resp.data);
+          var len = results.rows.length;
+          for (let i = 0; i < len; i++) {
+            let row = results.rows.item(i);
+            console.log(`${JSON.stringify(row)}`);
+          }
+        });
+      });
+      // const resp = await api.get<Category[]>('category');
+      // setData(resp.data);
     })();
   }, []);
 
