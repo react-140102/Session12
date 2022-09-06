@@ -15,6 +15,8 @@ namespace BitPayPaymentGatewayAPI.Controllers
         [HttpGet]
         public void Send(string Amount = "5000", string FactorId = "201", string Name = "Ali Rezaei", string Email = "md@gmail.com", string Description = "Test DESC")
         {
+            /*db */
+
             BitPay bitpay = new BitPay();
 
             string Url = "http://bitpay.ir/payment-test/gateway-send";

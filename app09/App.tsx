@@ -14,13 +14,25 @@ import {CameraScreen} from './screens/CameraScreen';
 const Tab = createBottomTabNavigator();
 
 const App = () => {
+  const config = {
+    screens: {
+      TabNews: 'pay/:id',
+      TabHome: 'home',
+    },
+  };
+
+  const linking = {
+    prefixes: ['daru://'],
+    config,
+  };
+
   useEffect(() => {
     RNBootSplash.hide();
   }, []);
 
   return (
     <PaperProvider>
-      <NavigationContainer>
+      <NavigationContainer linking={linking}>
         <Tab.Navigator>
           <Tab.Screen
             name="TabHome"

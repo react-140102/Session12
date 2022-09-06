@@ -4,4 +4,23 @@
 <h1>Payment Result :</h1>
 <h2>@ViewData["msg"]</h2>
 
-<a href="rn://s11?id=@{ @ViewData["id"]}" >بازکشت به اپ</a>
+<a href="daru://pay/@{
+    @ViewData["id"]
+}"><span></span> بازکشت به اپ</a>
+
+<a href="daru://home">HOME</a>
+
+<script >
+	let cnt = 5;
+    document.querySelector("a span").innerText = cnt;
+    let tid = setInterval(() => {
+        if(cnt === 0){
+            window.location = "daru://s11?id=@{ @ViewData["id"]}";
+            clearInterval(tid)
+            return;
+		}
+        cnt--;
+        document.querySelector("a span").innerText = cnt;
+    }, 1000)
+
+</script>
