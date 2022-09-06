@@ -166,3 +166,12 @@ Release
   home path: 
     linux, mac  = ~
     windows = %HOMEPATH%
+
+Test
+  after ❌
+  before
+    TDD - Test Driven Development
+      1. unit test
+      2. Minimum code ke test o pass kone
+      3. refactor
+      
