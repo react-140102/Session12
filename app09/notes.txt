@@ -150,3 +150,5 @@ Payment
 
 
 Deep link
+  https://reactnavigation.org/docs/deep-linking/
+  https://reactnavigation.org/docs/configuring-links#handling-nested-navigators
