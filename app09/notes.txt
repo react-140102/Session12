@@ -152,3 +152,17 @@ Payment
 Deep link
   https://reactnavigation.org/docs/deep-linking/
   https://reactnavigation.org/docs/configuring-links#handling-nested-navigators
+
+
+Release
+  in folder android -
+    gradlew.bat assembleRelease  - apk -> cafe bazar & apk direct
+    gradlew bundleRelease        - aab -> google store
+      powershell ./gradlew
+
+
+  keytool -genkeypair -v -storetype PKCS12 -keystore release.keystore -alias release -keyalg RSA -keysize 2048 -validity 10000
+
+  home path: 
+    linux, mac  = ~
+    windows = %HOMEPATH%
